@@ -1,0 +1,16 @@
+    iteraciones
+    while
+    bucle infinito, puede ocurrir si se supera el tamaño maximo del dato
+    for(byte n=0; n < 10; n++)
+    {}
+    cuando se declara en el for solo se puede usar dentro del for
+    
+generar un número aleatorio entre 1 y 10 y le pida al usuario que adivine el
+número, sin límite de intentos.
+for each es util mostrar arrays completos, para salir solo se puede con un break
+for(TipoDato nombre: arreglo)
+ejemplo:
+int [] j={1,2,3,4,5,6};
+for(int i:j){//tipo de dato del array, no el array
+	System.out.println(i);
+}

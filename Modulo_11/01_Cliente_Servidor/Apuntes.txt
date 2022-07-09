@@ -1,0 +1,18 @@
+Protocolo http
+    Es un protocolo cliente-servidor
+    El cliente envia peticiones (request) al  servidor, se realizan a traves de verbos
+        GET: solicita la representacion de un recurso especifico. recuperar datos
+        HEAD: pide un response identico al de GET pero sin el cuerpo del mensaje, solo el encabezado
+        POST: se envia una entidad a un recurso especifico
+        PUT: reemplaza todas las representaciones actuales del recurso de destino con la carga util de la peticion
+        DELETE: borra un recurso en especifico
+    El servidor envia mensajes de respuesta (response) y no guarda informacion del cliente
+    ademas de devolver el recurso solicidado, devuelve un codigo que proporciona informacion
+        Respuestas informativas  (100-199)
+        Respuestas satifactorias (200-299)
+        Redirecciones            (300-399)
+        Errores de clientes      (400-499) -> 404 Recurso no encontrado
+        Errores de servidores    (500-599) -> 500 Error en el servidor
+
+    URL (Uniform Resource Locator)
+        ver Formato_URL.png

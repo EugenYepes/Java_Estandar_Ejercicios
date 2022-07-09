@@ -1,0 +1,75 @@
+Formas de guardar la informacion, para que no se borre cuando se apaga el programa
+Modelo relacional
+    filas y columnas o tuplas y campos
+    se pueden relacionar varias tables por sus columnas y crear una nueva tabla a partir de una anterior
+Motores de base de datos
+    1.Definir una base de datos: especificar los tipos de dats, estructuras y restricciones para los datos que se guardaran
+    2.Construir una base de datos: proceso de guardar los datos
+    3.Manipular la base de datos: consulta y modificacion de la base de datos
+    Algunos motores de bases de datos son: MySQL, SQLServer, PstgreSQL, ORACLE, MariaDB 
+Control de concurrencia
+    permite que muchos DBMS(Sistemas de Administracion de bases de datos) puedan acceder a la misma base de datos al mismo tiempo
+Modelo Cliente-Servidor
+    Servidor: Responde a las peticiones de los clientes, proporcionando el servicio requerido
+    Cliente: Es el elemento de la comunicacion que pide un servicio al servidor
+
+SQL (Structured Query Language)
+    Lenguaje declarativo estandar de alto nivel que se comunica con bases de datos relacionales
+    Cada columnam variable local, expresion y parametro tiene un tipo de dato relacionado, un atributo
+    Las filas son tuplas y al conjunto de columnas se lo conoce como relacion
+    Tipos de datos:(ver imagenes)
+        Numericos exactos
+        Numericos aproximados
+        Fecha y hora
+        Cadenas de caracteres
+        Cadenas de caracteres Unicode
+        Cadenas binarias
+        Otros tipos de datos
+
+    Comentarios:
+        /*Comentario de 
+            bloque
+        */
+        --comentario de una linea
+        #comentario de una linea
+
+    Crear objetos en una base de datos:
+        create database NombreBaseDatos;
+        create table NombreTabla(NombreColumna1 tipoDato, NombreColumna2 tipoDato, clavePrimaria(NombreColumna), claveForanea(NombreColumna);
+    
+    Eliminar objetos de una base de datos:
+        drop database NombreBaseDatos;
+        drop table NombreTabla;
+
+    Modificar base de datos(agregar, eliminar y modificar columnas de una tabla)no los valores
+        alter table NombreTabla add NombreColumna tipoDato;
+        alter table NombreTabla drop NombreColumna tipoDato;
+        alter table NombreTabla modify NombreColumna tipoDato;
+
+    Restricciones
+        Clave primaria: es uno o combinacion de campos que le indica a la tabla que ese registro (fila) es unico
+        Clase foranea: es uno o combinacion de campos que le indica a la tabla que debe existir
+
+    Insertar Registros:
+        INSERT -> INTO -> ORIGEN DE DATOS(TABLAS) -> ( -> CAMPOS -> ) -> VALUES -> ( -> VALORES -> )
+
+    Seleccionar Registros
+        SELECT -> LISTA DE SELECCION(CaMPOS-FOPRMULAS-SUBCONSULTAS) -> FROM -> ORIGEN DE DATOS(TABLAS-SUBCONSULTAS) -> WHERE -> CONDICION DE SELECCION
+
+    Actualizar Registros
+        UPDATE -> ORIGEN DE DATOS(TABLAS-SUBCONSULTAS) -> SET -> CAMPOS Y NUEVOS VALORES -> WHERE -> CONDICION DE ACTUALIZACION
+
+    Borrar Registros
+        DELETE FROM -> ORIGEN DE DATOS(TABLAS) -> WHERE -> CONDICION DE ELIMINACION
+
+    Operadores relacionales
+        =   Igualdad
+        <   Menor que
+        >   Mayor que
+        <=  Menor o igual que
+        >=  Mayor o igual que
+        <>  Distinto
+
+    Operadores logicos 
+        AND
+        OR

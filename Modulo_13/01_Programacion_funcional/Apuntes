@@ -1,0 +1,27 @@
+Paradigma funcional
+    Parametro -> Funcion -> Valor de retorno
+
+Interfaz funcional
+    es una interfaz funcional si y solo si posee un solo metodo abstracto
+    puede tener o no la notacion de @FuncionalInterface
+    puede tener metodos por defecto o estaticos sin restricciones
+    ej
+    @FuncionalInterface
+    public interface interfaz{
+        retorno metodo(tipo de parametros)
+    }
+Lambdas
+    son un metodo anonimo, un metodo abstracto que esta en la interfaz, no se necesita implementar en una clase
+    lo de la izquierda del operador lambda se convierte en lo de la derecha
+    Estructura
+        1- Si hay un unico parametro, no es necesario utilizar parectesis
+        2- Si no hay parametros, o has 2 o mas, hay que usar parametros
+        3- Esta implicito el tipo de objeto que se va a utilizar, no es necesario declararlo en el parametro
+    Operador lambda ->
+        operador flecha, separa la declaracion de los parametros de la declaracion del cuerpo de la funcional
+    cuerpo 
+        cuando el cuerpo de la expresion lambda no tiene mas de una linea no es necesario usar llaves
+        cuando el cuerpo tiene mas de una linea es necesario usar llaves
+    Ejemplo declarativo
+    en programa
+

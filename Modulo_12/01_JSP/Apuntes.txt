@@ -1,0 +1,51 @@
+Java Server Pages (JSP)
+    Solucion de java para el desarrollo web dinamico
+    Poseen tags HTML y fragmentos de codigo java llamados Scriptlets
+    Se genera un archivo JSP que se convierte en una clase Servlet y se ejecuta en el servidor
+Objetos implicitos
+    recuest     objeto de la clase HttpServletRequest
+        
+    response    objeto de la clase HttpServletResponse
+    session     objeto de la clase HttpSession
+    out         objeto de la clase HttpWriter usada para imprimir directamente en la pagina resultante
+
+Elementos JSP
+    se puede incorporar codigo java en documentos HTML, JSP y/o XML con los sigueintes símbolos
+    <%
+        //lo que esta aca es java
+    %>
+    <%-- esto de aca es JSP, un comentario de una linea
+
+    Expresiones 
+        se usan para mandar valores directamente a la pagina web resultante del JSP
+        tiene un igual '=' luego del %
+        <%=recuest.getParameter("nombre")%>
+        <%=i %>
+    <%
+        for(int i = 0; i < 10; i++){
+            out.print(i)
+        }
+    %>
+    Declaraciones
+        con signo de exclamacion !
+        <%!
+        %>
+    Otros elementos JSP
+        Directivas
+            Son etiquetas a partir de las cuales se genera informacion que puede ser utlizada por el motor JSP. 
+                No porducen una salida visible al usuario, sino que configuran como se ejecutara la pagina JSP
+            ver imagen Directivas.jpg
+            se escriben con @
+            <%@
+            %>
+
+JSP servlets
+    El servidor o contenedor web crea un Servlet por cada documento y mostrara el resultado en HTML
+
+RequestDispacher
+    Esta interfaz permite enviar objetos a otro recurso (html, servlet o jsp)
+    ver imagen RequestDispacher.png
+
+MVC (Model View Controller)
+    comunicacion a partir de un patron de arquitectura
+    ver imagen MVC.png

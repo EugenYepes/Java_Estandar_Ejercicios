@@ -1,0 +1,13 @@
+Herencia de atributos y metodos
+una sub clase hereda los atributos de una super clase
+la subclase se declara de esta manera
+public class nombre extends persona(){}
+se puede usar para reutilizar codigo
+java solo tiene herencia simple
+los contructores de las clases superiores no se heredan
+si el constructor de la clase superior posee constructores que no son por defecto, se crea un constructor con la sentencia super(); que hara que se utilice el 
+constructor del padre en funcion de los parametros que reciba 
+los constructores se llaman en el orden de las clases, primero los de las clases superiores
+se pueden usar metodos de clases superiores cuando se llama a una clase que hereda
+todas las clases de java heredan de objet
+si una clase es public final class no podra tener hijos

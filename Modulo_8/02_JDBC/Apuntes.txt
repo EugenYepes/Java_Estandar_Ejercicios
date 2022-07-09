@@ -1,0 +1,22 @@
+JDBC (Java Database Connectivity)
+    es un API de java para acceder a bases de datos relacionales
+        API conjunto de clases e interfaces
+    
+    Connection 
+        provee una sesion de trabajo con una base de datos.
+        permite modificar, consultar y obtener info sobre la estrcutura
+        Metodos: (ver imagen metodos_connection.png)
+    
+    para crear instrucciones sql para la base de datos se deben guardar en 
+        una string y desde ahi enviar a a la conexion en un metodo de los siguientes:
+            execute(String sql)
+                insert update o delete
+            executeQuery(String sql)
+
+    ResultSet
+        Interfaz que permite recuperar la informacion de una tabla
+        getInt()    getString()     getBoolean()    toman como parametro el indice de la columna, o el nombre
+        executeQuery()  devuelve el objeto a utilizar
+        para recuperar cada una de las filas se puede usar next(), retorna un boolean si existe la fila y mueve el cursor una fila para adelante
+
+    DAO (Data Access Objet)

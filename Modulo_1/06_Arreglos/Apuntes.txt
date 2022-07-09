@@ -1,0 +1,10 @@
+Declaracion de arreglos
+tipo[] identificador;
+o
+tipo identificador[];
+identificador = new tipo[n];//n es la cantidad de espacios, asigna la memoria
+tambien se puede hacer todo en una sola linea
+inicializar un arreglo
+int[] nums = {10, -21, 412};
+se guarda la direccion de memoria, el nombre del arreglo lo representa
+nums.length es el campo de la longitud del arreglo

@@ -1,0 +1,9 @@
+throws
+    se usa en la firma de los metodos
+    ejemplo:
+    public void metodo() throws FileNotFoundException{}
+    la excepcion se delega a quien lo invoque, no se maneja dentro del metodo
+    se puede trabajar con un bloque try-catch o volverla a delegar
+
+throw
+    lanza la excepcion, se fuerza el error

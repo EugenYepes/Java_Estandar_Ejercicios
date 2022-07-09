@@ -1,0 +1,20 @@
+atributos de clases creadas por nosotros
+crear objeto Domicilio en la clase persona
+Persona persona1 = new Persona();
+Domicilio domicilio = new Domicilio();
+persona1.domicilio=domicilio;//se le asigna el atributo domicilio a la
+persona
+para acceder a traves de la persona
+persona1.domicilio.calle="Tucuman";//esto solo se puede hacer en caso de ya
+tener un constructor para domicilio
+System.out.println(persona1.dameTuNombreCompleto());//se llama al metodo, y
+se ve el retorno del mismo
+Persona persona = new Persona();
+
+
+constructores: para construir o instanciar una clase
+siempre antes de los metodos 
+es llamado cada vez que se haga un new de la clase persona
+pueden recibir parametros para setear de manera automatica los datos de los atributos
+para pedir memoria, siempre que se inicia un objeto domicilio le da memoria para crearlo
+dependiendo de los parametros que pase al crear un objeto este ira a un constructor u a otro

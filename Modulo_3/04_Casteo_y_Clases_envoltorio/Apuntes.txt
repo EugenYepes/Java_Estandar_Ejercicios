@@ -1,0 +1,26 @@
+Casteo implicito 
+cuando necesitamos guardar un dato mas chico en uno mas grande
+ej
+byte miByte = 37;
+short miShort = miByte;
+int miInt = miShort;
+float miFloat = miInt;
+System.out.println(miFloat);//37.0
+char miChar = 'a';
+miInt = miChar;
+System.out.println(miInt);//97
+
+Casteo explicito
+se castea con parentesis <un tipo de dato mas pequeno>=(<tipo de dato>)<un tipo de dato mas grande>;
+se puede perder presicion, por ejemplo en los decimales
+ver tabla de casteo
+
+Clases envoltorio (Wrapper)
+Envuelve un tipo de dato primitivo, en el caso que una clase no permita usar este tipo de datos
+crea un objeto de un dato primitivo, y admite como parameto el tipo de dato primitivo, o una string 
+para obtener el valor Objeto.<tipoDatoPrimitivo>Value();
+para versines de java 9 o superior 
+Byte miByte = Byte.valueOf((byte)1);
+miByte = Byte.parseByte("63");
+Boxing: se puede asignar directamente un dato primitivo a su respectivo envoltorio sin iniciar el objeto
+miByte = 63;

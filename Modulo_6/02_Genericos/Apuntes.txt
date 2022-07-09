@@ -1,0 +1,15 @@
+Clases genericas
+public class GenericaDosAtributos <K,V>{}
+K y V se envian como atributos de la clase
+Nomenclatura de los atributos
+Letra   Valor       Descripcion
+E       Element     usado bastante por Java Collections Framework
+K       Key         clave, usado por mapas
+N       Number      usado para numeros
+T       Type        usado para objetos
+S, U, V etc         para representar otros tipos
+
+Al instanciar:
+GenericaDosAtributos <Integer,Integer>telefono = new GenericaDosAtributos<Integer,Integer>();
+
+sirven para reutilizar codigo, evitar casteos excesivos, comprueba los tipos de dato en tiempo de compilacion.

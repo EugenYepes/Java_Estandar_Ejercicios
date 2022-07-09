@@ -1,0 +1,26 @@
+boolean a = true;
+if else if else
+entre los parentesis tiene que ir un boolean
+else if(condicion) para pone runa condicion de salida
+if (a) {
+}
+else {
+if (a) {
+}
+else {
+if (a) {
+}
+else {
+// sale por aca si no se cumple ninguna
+}
+}
+}
+switch (key) {
+case value:
+
+break;
+
+default:
+break;
+}
+que numero es mayor??

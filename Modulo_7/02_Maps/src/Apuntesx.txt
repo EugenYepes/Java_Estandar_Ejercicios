@@ -1,0 +1,49 @@
+Mapas o diccionarios
+no pertenecen al java collection framework porque trabajan de manera muy diferentes pero es una coleccion
+Los mapas almacenan elementos asociados a una clave
+La interfaz Map no admite claves duplicadas y es util para no guardar elementos con la clave duplicada
+Si se intenta agregar un objeto al mapa con una clave que ya existe sobreescribira el valor 
+
+AbstractMap
+    La clase agrega los metodos equals y hashCode
+
+SortedMap
+    La interfaz cuando se implementa permite tener los elementos ordenados
+
+Metodos Map (ver imagen MetodosMap.png)
+
+Iteradores
+    Los mapas no heredan de Iterator, pero a traves del metodo keySet que nos devuelve uina coleccion set con las claves obtener un iterador.
+    Se podra recorrer el mapa, pero no se podran agregar, eliminar o modificar objetos
+
+Map.Entry  <K,V>
+    Esta interfaz permite acceder a los valores y claves del mapa, tambien tiene un metodo para modificar un valor dentro del mapa
+    Tipo        Metodo          Descripcion
+    K           getKey()        devuelve la clave de la iteracion correspondiente
+    E           getValue()      devuelve el valor de la iteracion correspondiente
+    V           setValue()      Reemplaza el valor de la iteracion correspondiente y retorna el valor reemplazado
+
+HashMap
+    Ideal para busqueda, inserción y borrado de elementos
+    La tabla no esta sincronizada, lo que permite que existan claves null
+    Guarda un par clave-valor y no garantiza el orden de los elemetos
+    Ejemplos:
+    Map<Integer, String> nombres = new HashMap<Integer, String>();
+    AbstractMap<Integer, String> nombres = new HashMap<Integer, String>();
+    HashMap<Integer, String> nombres = new HashMap<Integer, String>();
+
+LinkedHashMap
+    Almacena los elementos en funcion del orden de incersion y con una lista doblemente enlazada
+    Ejemplos:
+    Map<Integer, String> nombres = new LinkedHashMap<Integer, String>();
+    AbstractMap<Integer, String> nombres = new LinkedHashMap<Integer, String>();
+    LinkedHashMap<Integer, String> nombres = new LinkedHashMap<Integer, String>();
+
+TreeMap
+    Los ordena en funcion de sus claves
+    Si se dejan los parametros por default sera un orden natural
+    Ejemplo:
+    Map<Integer, String> nombres = new TreeMap<Integer, String>();
+    AbstractMap<Integer, String> nombres = new TreeMap<Integer, String>();
+    TreeMap<Integer, String> nombres = new TreeMap<Integer, String>(); //orden natural
+    TreeMap<Integer, String> nombres = new TreeMap<Integer, String>(new ordenAlternativo()); //orden alternativo

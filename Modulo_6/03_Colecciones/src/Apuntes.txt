@@ -1,0 +1,97 @@
+Conjunto de interfaces y clases (Collections Framework) para agrupar elementos de forma dinamica, sirve para agregar Objetos sin indicar el tamaño inicial
+Tiene un conjunto de metodos (ver imagen MetodosCollection.png)
+Estas collecciones son Interfaces y Clases que tienen parametos, son genericas, po lo que se debe indicar que objeto se debe almacenar
+Para recorrerlos en una iteracion es necesario hacerlo de una manera diferente
+Tipo        Metodo          descripcion
+boolean     hasNext()       true si la colleccion tiene otro elemento
+E           next()          devuelve el siguiente elemento de la itaracion
+void        remove()        elimina de la coleccion subyacente el ultimo elemento devuelto por este iterador
+Ejemplo:
+E elemento1;
+Coleccion<E> coleccionPrincipal = new Implementacion<E>();
+coleccionPrincipal.add(elemento1);
+Iterador<E> iterador = coleccionPrincipal.iterador()
+while (iterador.hasNext()) {
+    E elementoAuxiliar = iterador.next();
+    if(/*condicion*/) {
+        iterador.remove();
+    }
+}
+
+Interfaz Set
+    La interfaz Set no admite datos duplicados
+    No garantiza el orden de los elementos
+    La clase AbstractSet proporciona una implementacion esqueletica de la interfaz Set y agrega implementaciones para los metodos equals y hashCode
+    La interfaz SortedSet las clases que la implementen tendran los elementos ordenados
+
+    HashSet
+    almacena en una tabla hash (tabla hash: contenedor asociativo tipo diccionario que permite almacenar y recuperar elementos)
+    los hash son valores unicos sin ordenar itera mas rapido que otras colecciones
+    las colecciones de tipo hash deben tener un metodo equals y un hashCode sobreescritos en la clase del objeto que guardaran, de esta 
+    Ejemplo:
+    AbstractSet<String> nombresA = new HashSet<>();
+    Set<String> nombresA = new HashSet<>();
+    HashSet<String> nombresA = new HashSet<>();
+
+    Equals y hashCode si dos objetos son iguales tambien su hashCode lo debe ser
+
+    LinkedHashSet (Listas enlazadas)
+    cada elemento tiene 3 nodos, el primero hace referencia al anterios y el ultimo al siguiente, el del medio cotiene la informacion
+    si los nodos estan en los extremos no hacen referencia a nada
+    Ejemplo:
+    AbstractSet<String> nombresA = new LinkedHashSet<>();
+    Set<String> nombresA = new LinkedHashSet<>();
+    HashSet<String> nombresA = new LinkedHashSet<>();
+
+    TreeSet
+    Los ordena en funcion de los valores, los ordena implementando el algoritmo del arbol binario ordenado, por lo tanto garantiza el orden de los elementos
+    AbstractSet<String> nombresA = new TreeSet<>();
+    Set<String> nombresA = new TreeSet<>();//orden natural
+    Set<String> nombresA = new TreeSet<>(new OrdenAlternativo());//orden alternativo
+    HashSet<String> nombresA = new TreeSet<>();
+
+    ListIterator
+    Ordenar
+    dos interfaces Comparable<T> y Comparator<T>
+    Comparable
+        es con orden natural
+        debe ser implementada por la clase
+        compara el objeto this con otro que toma como parametro el metodo compareTo
+    Comparator
+        es con orden alternativo
+        compara los dos objetos que toma como parametro el metodo compare
+    Los metodos compare y compare to devuelven:
+        negativo si o1 es menor que o2
+        cero si o1 es igual a o2
+        positivo si o1 es mayor que o2
+        o1.compareTo(o2);
+        compare(o1,o2);
+
+Interfaz List
+    La interfaz List a diferencia de Set si permite tener elementos duplicados
+    Acceso posicional (como si fuera con un vector, pro el subindice en un metodo y entre parentesis)
+    Busca un elemento concreto y devuelve su posicion
+    Iteracion sobre elementos, mejora el iterador por defecto
+    metodos de List (ver imagen MetodosListas.png)
+
+    Iteradores de List
+    permiten recorrer la lista (ver imagen IteradoresLista.png)
+
+    ArrayList 
+    es un array redimensionable con acceso por subindice
+    Ejemplo:
+    AbstractList<String> nombresA = new ArrayList<>();
+    List<String> nombresA = new ArrayList<>();
+    ArrayList<String> nombresA = new ArrayList<>();
+
+    LinkedList (lista doblemente enlazada) 
+    cada uno de los elementos tiene un nodo que apunta al elemento previo y al siguiente
+    AbstractList<String> nombresA = new LinkedList<>();
+    List<String> nombresA = new LinkedList<>();
+    ArrayList<String> nombresA = new LinkedList<>(); o LinkedList<String> nombresA = new LinkedList<>();
+
+    LinkedList permite incerciones o eliminaciones en menor tiempo utilizando iteradores, pero solo acceso secuencial de elementos
+    ArrayList perime un acceso de lectura aleatorio rapido, para obtener cualquier elemento en un tiempo mas optimo, pero agregar o
+    eliminar cualquier elemtno menos el final requiere desplazar todo el array
+    En resumen LinkedList para listas dinamicas que requieren muchas incerciones, ArrayList para lista que no se sabe su tamaño al momento de declararlas
+    y un array comun y corriente si ya se sabe el tamaño maximo que va a tener y no hace falta eliminar o reordenar

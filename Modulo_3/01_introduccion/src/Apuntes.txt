@@ -1,0 +1,18 @@
+Atributos y metodos de clase
+los metodos setters y getters son metodos comunes porque son de instancia,
+porque para acceder tienen que ser instanciados(llamados)
+la palabra reservada static sirve para acceder sin instaciar(sin crear el
+objeo)
+Variables y constantes de clase
+es una variable y/o constante de clase, se accede sin necesidad de instanciar
+un objeto de la clase
+mejoran el acceso en memoria
+Metodos estaticos
+los metodos estaticos no pueden utilizar miembros de datos no estaticos ni
+llamar directamente a un metodo no estatico
+this y super no se pueden usar en constexto estatico
+Bloque de codigo estatico se ejecuta antes
+static {
+/* codigo */
+}
+que pasa con el id si lo tengo de forma estatic nu puedo crear uno unico para cada persona

@@ -1,0 +1,4 @@
+A traves del constructor de la clase de la clase de una excepcion en particular,
+    que siempre tiene que heredar de la clase Exception se puede mandar un mensaje personalizado
+Se puede lanzar un error en particular con un throw new en el metodo o usar 
+    un try-catch para proteger de errores

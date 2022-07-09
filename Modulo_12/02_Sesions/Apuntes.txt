@@ -1,0 +1,2 @@
+HttpSesion
+    almacenar informacion, yaque el protocolo http no lo hace

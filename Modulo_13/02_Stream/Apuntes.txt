@@ -1,0 +1,66 @@
+Stream
+    interfaz para procesar datos de manera funcional
+    provee metodos de orden superior
+        los metodos de orden superior son funciones que reciben una o mas funciones y retornan un objeto o funcional
+    
+Exepciones
+    RuntimeException
+    IllegalStareExeption
+
+Interfaz BaseStream
+    flujo de objetos que permite el procesamiento en paralelo y secuencial 
+Interfaz Stream
+    metodos necesarios para hacer operaciones.
+    (ver Metodos_Stream.png)
+algunas funciones con expresiones lambda
+    solo se puede realizar una operacion a la vez
+    Function
+        toma los parametos, los procesa y los opera
+        ((Parametros)->Function)
+    Predicate
+        toma los parametros y evalua si cumple con la condicion dada
+        ((Parametros)->Predicate)
+    Consumer
+        toma los argumentos y no retorna nada, solo procesa
+        ((Parametros)->Consumer)
+    
+    los metodos filter(), map() son operaciones intermedias
+    los metodos count y sum son operaciones de terminal
+
+metodos funcionales
+    forEach()
+        la itaracion forEach se puede escribir como metodo
+        Ejemplo:
+        List<String> nombres = Arrays.asList("nombre1","nombre2","nombre3");
+        for(String nombre = nombres){
+            System.out.println(nombre)
+        }
+        //se puede hacer tambien de esta manera y muesta lo mismo
+        //esta es la forma funcional
+        (nombres.forEach(e) -> System.out.println(e));
+
+    map()
+        es un metodo que transforma un objetoto en otro aplicando una funcion y retornara un nuevo flujo
+        ejemplo: (pasar nombres a mayusculas)
+        List<String> nombres = Arrays.asList("nombre1","nombre2","nombre3");
+        List<String> nombreMayuscula = nombres.stream.map((e) -> toUpperCase()).collect(Collectors.toList());
+    filter()
+        filtra metodos en funcion de un predicado que se haya enviado
+        ejemplo: (filtrar nombres que empiezan con x letra)
+        List<String> nombres = Arrays.asList("nombre1","nombre2","nombre3");
+        List<String> nombresFiltrados = nombres.stream().filter((e) -> e.startWith("S")).collect(Collectors.toList());
+    reduce 
+        recibe una funcion de acumulacion y retorna un unico valor
+        List<String> nombres = Arrays.asList("nombre1","nombre2","nombre3");
+        //agrega espacios en los nombres.
+        String nombreSalida = nombres.stream().reduce("",(a, b) -> a + " " b)
+
+Sobreescritura de metodos
+    se puede sobreescribir cualquier metodo de una clase cuando se itera el objeto
+    por eljemplo el metodo contains de ArrayList:
+    ArrayList<String> nombres = new ArrayList<String>(){
+        public bollean contains(Object 0){
+            return true;
+        }
+    }
+    con esta sobreescritura este metodo siempre devolvera true

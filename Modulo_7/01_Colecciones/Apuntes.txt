@@ -1,0 +1,35 @@
+Colas y Pilas
+una estructura de elementos lineal en la que unicamnete se pueden agregar o eliminar los elementos unicamente por uno de los extremos
+FIFO (First In, First Out)
+    se eliminan de la cola en la misma forma en la que fueron incertados
+LIFO (Last In, First Out)
+
+Interfaz Queue
+de un extremo
+    Metodos Queue
+    Tipo        Metodo                  Descripcion
+    boolean     add(E e)                Inserta un elemento
+    boolean     addAll(Collection<E>c)  Inserta una coleccion
+    E           element()               Devuelve el elemento que se encuentra al principio de la cola, pero no lo elimina
+    boolean     offer(E e)              Inserta un elemento al final de la cola
+    E           peek()                  Devuelve el elemento que se encuentra al princiipio de la cola
+    E           poll()                  Devuelve y elimina el elemento del principio de la cola
+
+PriorityQueue
+Deque
+Colas de dos puntas
+Ordena los elementos con una prioridad dada, si no se le asigna nada sera el orden natural
+    Metodos Deque
+    Tipo        Metodo              Descripcion
+    boolean     offerFirst(E e)     inserta un elemento al principio de la cola
+    boolean     offerlast(E e)      inserta un elemento al principio de la cola
+    E           peekFirst()         toma el elemeno al principio de la pila
+    E           peekLast()          toma el elemeno al final de la pila
+    E           pollFirst()         toma y elimina en elemento al final de la cola
+    E           pollFirst()         toma y elimina en elemento al principio de la cola
+
+ArrayDeque
+Almacena elementos para trabajarlos como colas 
+Queue<String> nombres = new ArrayDeque<>();
+Deque<String> nombres = new ArrayDeque<>();
+ArrayDeque<String> nombres = new ArrayDeque<>();

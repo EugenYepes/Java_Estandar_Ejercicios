@@ -1,0 +1,7 @@
+polimorfismo
+clases en la misma jerarquia que tienen metodos o atributos con sobreescritura de miembros
+Polimorfismo por sobreescritura (con redefinicion)
+se puede un objeto de una clase padre e instanciarlo de una clase hija
+Polimorfismo sin Redefinicion
+cuando en diferentes clases se implementa un metodos, con diferente comportamiento y no estan en la jerarquia de herencia
+se puede castear de forma explicita de un objeto padre a un objeto hijo

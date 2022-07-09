@@ -1,0 +1,9 @@
+Interface
+declaracion  de comportamiento, metodos sin implementacion
+todos los mentodos son abstractos y de acceso publico.
+los atributos deber ser estaticos, finales y de acceso publico.
+como esto es obligatorio si se los deja por default tendran estas caracteristicas
+simula herencia multiple
+public abstract class Auto implements Mantenimiento, Archivo{}
+cualquier clase puede implementar una o varias interfases
+Toda clase que tenga un metodo abstracto, al ser heredada debe implementar ese metodo y sobreescribirlo

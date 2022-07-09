@@ -1,0 +1,57 @@
+Operadores aritmeticos
++   suma
+-   resta
+*   multiplicacion
+/   division
+%   modulo
+
+Operador concatenacio
+    +
+    concatena string, o una string y un numero y devuelve una string
+
+Presedencia de operadores
+    ver tabla https://es.wikibooks.org/wiki/Programaci%C3%B3n_en_Java/Precedencia_de_operadores
+
+Operadores de asignacion
++=
+-=
+*=
+/=
+byte a = 10;
+a += 5;//a = a + 5
+System.out.println("a=" + a);
+a /= 3;//a = a / 3
+System.out.println("a=" + a);
+
+operadores de incremento y decremento
+++  a = a + 1
+--  a = a -1;
+
+Operadores relacionales
+<
+>
+<=
+>=
+==
+!=
+los operandos tienen que ser numericos
+informar si la relacion se cumple o no
+lo informa mediante un boolean true o false
+ej 
+boolean resL;
+resL = 10 < 25;
+
+Operadores logicos
+| A | B | AND | OR | XOR |
+| 0 | 0 |  0  | 0  |  0  |
+| 0 | 1 |  0  | 1  |  1  |
+| 1 | 0 |  0  | 1  |  1  |
+| 1 | 1 |  1  | 1  |  0  |
+
+| A | NOT |
+| 0 |  1  |
+| 1 |  0  |
+&: and
+|: or
+^: xor
+!: not

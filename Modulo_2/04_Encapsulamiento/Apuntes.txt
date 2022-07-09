@@ -1,0 +1,4 @@
+Encapsulamiento: protejer datos con private
+crear un metodo publico get para poder ver el valor
+crear un metodo publico set para poder cargar un valor al atributo private del objeto
+para un mayor control, basta con sacar el set para que sea un atributo solo de lectura

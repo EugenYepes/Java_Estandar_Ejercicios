@@ -1,0 +1,9 @@
+DTO (Data Transfer Objet)
+    objeto que se encarge de la transferencia de datos entre ej: cliente servidor
+DAO
+    todo patron de diseño tiene una estructura, en el caso del DAO es de la siguiente manera
+    Business Objet: (logica del negocio. Ej persona alumno)
+    Data Access Object: (Capa de acceso a datos)
+    Transfer Object: DTO
+    Data Source: Implementacion de una interfaz ej la conexion
+

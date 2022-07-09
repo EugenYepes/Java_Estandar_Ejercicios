@@ -1,0 +1,33 @@
+Excepciones camptura de errores
+    excepcion: un error que interrumpe el flujo del programa
+Dos tipos de excepciones:
+    ->unchecked exception
+        heredan de runtime exception, como dividir por cero
+    ->checked exceptions
+        deben ser obligatoriamente manejadas
+Crear una clase de excepcion propia
+    el nombre de la clase debe terminar en Exception y debe heredar de exception
+    para mostrar el mensaje de error sobreescribir el metodo de exception
+    getMessage
+bloque try-catch-finally
+    - try:contiene lo que puede traer el error
+    - catch(): codigo necesario para gestionar el error se pueden crear sin limites
+    - finally: optativo se ejecuta independientemente de lo que ocurra en try, se
+    puede usar para liberar recursos
+Sintaxis:
+try {
+} catch (Exception e) {
+}
+finally{
+}
+Palabra reservada throws
+    si en un metodo se debe verificar si ocurre un error para crear un objeto de
+    la clase de errores propia
+    es necesario que el metodo sea declarado de esta manera:
+    public int dividir(int dividendo, int divisor) throws ClaseException{
+        if (divisor ==0){
+            throw new ClaseException();
+        }
+    }
+    Cuando se utiliza el metodo debe ser rodeado en un try-catch para poder ver
+    el error y que todo funcione correctamente

@@ -1,0 +1,8 @@
+Para usar archivos se debe primero abrirlos, y luego cerrarlos, para eso se debe usar un try al momento 
+    de abrir el archivo, y en el finally de este try otro bloque try-catch para cerrar el archivo
+En java 7 try with resources tiene una interfaz AutoCloseable 
+public abstract class Reader implements Readebke, Closeable{}
+public interface Closeable extends AutoCloseable{}
+public interface AutoCloseable {
+    void close() throws Exception;
+}

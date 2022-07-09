@@ -1,0 +1,27 @@
+Java EE (Java Enterprise Edition)
+Reglas en dos niveles
+    Capa de aplicacion
+        logica de la pagina
+    Capa de presentacion
+
+Excepciones
+    IOException
+    ServletException
+
+Paquete javax.servlet
+    Interfaz Servelet 
+        define los metodos que deben implementar todos los servlets
+    Interfaz ServeletConfig
+        es utilizado po un contenedor de servlet para pasar informacion a un servlet durante la inicializacion
+    Interfaz Serializable
+        se encarga de transformar los objetos de java en byte para transmitirlos por la red o persistirlos
+
+        Clase Abstracta GenericServlet 
+            define un servlet generico independiete de los protocolos a utilizar
+            La clase abstracta HttpServlet provee los metodos para responder solicitudes HTTP en el contexto de una app web
+
+Para manejar los verbos HTTP se debe crear una clase que extienda de httpServlets y sobreescribir los metodos a utilizar
+    ver metodos en Servlets.png
+
+    Interfaz HttpServletResponse para enviar respuestas a los clientes
+    Interfaz HttpServletRequest informacion de la solicitud para servlets HTTP

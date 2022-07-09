@@ -1,0 +1,7 @@
+Clases Abstractas
+public abstract class NombreDeLaClase{}
+las clases abstractas no pueden se instanciadas para crear objetos
+Metodos Abstractos
+public abstact nombreMetodo();
+son metodos vacions, solo poseen la firma, sirven para sobreescribir
+solo las clases abstractas pueden tener metodos abstractos

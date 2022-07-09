@@ -1,0 +1,33 @@
+variables: espacio en la memoria RAM que va a tener un nombre y un tipo de dato
+Declaracion de variables
+tipo identificador;
+
+Tipos de dato enteros primitivos
+byte
+    -128 a 127
+    reserva un byte
+short
+    -32768 a 34767
+    reserva 2 bytes
+int
+    -2147483648 a 2147483647
+    reserva 4 bytes
+long
+    -9223372036854775808 a 9223372036854775807
+    reserva 8 bytes
+
+Tipos de dato reales
+float
+    8 digitos de precision, no importa la posicion del punto decimal
+    reserva 4 bytes
+double
+    16 digitos de precision
+    reserva 8 bytes
+
+Tipos de dato para caracteres
+char
+    un caracter ascii
+    lo aigna con '' comillas simples
+String 
+    es una clase 
+    lo asigna con comillas dobles

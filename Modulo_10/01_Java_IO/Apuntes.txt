@@ -1,0 +1,78 @@
+Los Streams son medios para leer datos de una fuente y escribirlos en un destino, en el caso de este apunte de consola a archivo o viceversa 
+Los streams son unidireccionales
+Para archivos 
+    Streams orientados a caracteres (Reader - Writer)
+    Streams orientados a bytes (inputStream - OutputStream)
+
+IO (Imput Output)
+    gestionar comunicacion a traves de consola y archivos.
+    hay dos grandes grupos
+    Orientados a Caracteres
+    Orientados a Bytes
+
+Clase File(ver imagen Clase_File.png)
+    los metodos can comprueban si se tienen permisos para leer/escribir
+    abrir un archivo: (mismo procedimiento para leer pero cn FileReader)
+        File outputFile = new File("nombre del archivo");
+        FileWriter out = new FileWriter(outputFile);
+        //algoritmo para guardar los datos
+
+Excepciones 
+    IOEexception
+        lanza errores cuando se trata de leer un archivos
+    FileNotFoundException
+        lanza un error si no encuentra el archivo, se encuentrageneralmente en los constructores
+
+Clase abstracta ImputStream
+    representa un flujo de Bytes, proporciona los metodos para acceder a la informacion
+    Ejemplo de iteracion del objeto y carga de los datos en un array:
+        FileInputStream archivoBinario = new FileInputStream("nombre del archivo");
+        byte[] archivoBytes = archivoBinario.readAllBytes();
+    recomendable rodearlo con un try-catch para las excepciones antes mencionadas
+
+Clase abstracta OutputStream
+    representa un flujo de Bytes, proporciona los metodos para escribir la informacion
+    Ejemplo de guardado de datos en un archivo binario:
+        FileOutputStram archivoBinario = FileOutputStram(nombre del archivo");
+        archivoBinario.write(bytes);//bytes array de Bytes donde se guardan datos, tmb puede ser un entero
+Interfaz Readable
+    proporciona metodos de lectura, para leer archivos de texto plano
+    Clase FileReader
+        para leer archivos de texto
+        se puede usar de esta manera:
+        FileReader leerArchivo = new FileReader("Nombre del archivo a leer);
+        int c;
+        while((c = leerArchivo.read()) != -1){
+            char caracter = (char) c;
+            System.out.println(caracter);//muestra todo el archivo por consola
+        }
+    La interfaz Appendable proporciona metodos de escritura 
+        Clase FileWriter
+            un ejemplo para escribir archivos de texto
+            FileWriter EscribirArchivo = new FileWriter("Nombre del archivo");
+            for (int i = 0; i < parrafo.length(); i++){
+                escribirFichero.write(parrafo.charAt(i));
+            }
+
+Concepto Buffer
+    Es una zona en memoria que guarda datos generalmento de un unico uso y sirve para que el programa no se quede sin datos
+    para no leer caracter por caracter
+    En el caso de archivos binarios
+    BufferedInputStream archivoBinario = new BufferedInputStream(new FileInputStream(""nombre del archivo));//para que el archivo quede el el buffer
+    BufferedOutputStream, lo mismo que el BufferedInputStream pero para escribir en el archivo a partir del buffer
+
+    BufferReader, lo mismo que los BufferedInputStream y BufferedOutputStream pero para caracteres
+        muestra por lineas si se llega al final la linea sera null
+
+Lectura desde Classpath
+    archivo dentro de los paquetes de java
+    la ubicacion dentro del mismo paquete de java src/etc/etc como una String
+    InputStreamReader isr = InputStreamReader(NombreDeLaClaseActual.class.getResourceAsStream("nombre del archivo a leer"));
+
+JavaNIO
+    son bidireccionales
+    Path representa al File
+    Files metodos estaticos como los de File
+
+    FileVisitor
+    para recorrer todos los directorios a partir de determinada direccion

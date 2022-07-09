@@ -1,0 +1,8 @@
+Para manipular archivos que tengan un formato similar a key-value
+
+Clase abstracta Dictionary representa una estructura clave valor
+La interfaz Map no admite claves duplicadas
+La clase Hashtable proporciona los metodos
+    Metodos getProperty(String key)
+            load(Reader reader)
+            ver en detalle en imagen Metodos_properties.png

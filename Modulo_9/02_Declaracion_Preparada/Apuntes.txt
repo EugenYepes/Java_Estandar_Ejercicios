@@ -1,0 +1,12 @@
+Para que no se inyecte a la base de datos instrucciones maliciosas se genera una declaracion preparada
+Interfaz PreparedStatement 
+    crea un objeto del tipo PreparedStatement para evitar la inyeccion SQL
+
+    String SQL = "INSERT ?, UPDATE ?, DELETE ?";
+    PreparedStatement declaracionPreparada = conexion.preparedStatement(SQL);
+    declaracionPreparada.setTipo(1, valor);
+    declaracionPreparada.execute();
+
+    los valores en la string se representan con ? 
+    ej en un insert:
+    INSERT INTO personas (nombre, apellido, edad) values(?,?,?)//los valores comienzan desde el 1 de izquierda a derecha

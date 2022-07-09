@@ -1,0 +1,13 @@
+Sobreescriturra de metodos
+se puede crear un metodo en una clase que hereda con el mismo nombre y parametros que recibe que el metodo de la clase padre y modificarle el comportamiento
+cuando se crea un objeto de la clase hijo este pisara con su metodo el comportamiento del metodo de la clase padre
+si se utiliza final en un metodo ningun otro metodo que herede podra sobreescribir ese motodo
+final en un atributo lo transforma en una constante public static final String HOLA = "hola"; //la palabra va en mayuscula
+se realiza en otra clase, que hereda del padre,el metodo tiene que tener el mismo nombre, retorno y argumentos
+
+Sobrecarga de metodos
+se realiza en la misma clase, con el mismo nombre y retorno, pero con otros argumentos
+
+se recomienda usar @Override en los casos de sobreescritura, para aclarar que ese metodo ya esta en la clase padre y se esta sobreescribiendo
+se puede usar super.nombreMetodo(); para hacer referencia a un meto de una clase superior y no usar el que se sobreescribio
+final en un metodo hace que no se pueda sobreescribir en clases inferiores

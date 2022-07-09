@@ -1,0 +1,24 @@
+una clase que debe usar la palabra reservada enum en lugar de class, indica que hereda de Enum
+public enum Colores{
+    ROJO, AZUL, VERDE;
+}
+Agrupa las constantes, upper case
+Solo puede contener los valores de la lista,
+se puede usar para setear con presicion un valor de los que esta enumerado
+metodos del enum
+tipo    metodo      descripcion
+String  toString()  descripcion del objeto enum
+String  name()      nombre del enumordinal
+int     ordinal()   posicion del enum segun este declarado comenzando desde cero
+Enum[]  values()    array con todos los elementos que estan en el enum
+Enum    valueOF()   Constante del enum del valor de la cadena especificado si existe, error de lo contrario.
+
+Los enum NO se pueden instanciar
+A los enum se les puede asignar atributos, pero solo dentro del enum
+public enum Colores{
+    ROJO("FF0000","255,0,0"), 
+    AZUL("0000FF","0,0,255"), 
+    VERDE("00FF00","0,255,0");
+}
+
+Se pueden usar como valores en los switch
